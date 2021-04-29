@@ -3,9 +3,11 @@ from django.contrib.auth.models import User, auth
 from django.contrib import messages
 from . models import PageView,LogoutRegister
 from django.contrib.sessions.models import Session
+from django.contrib.auth.decorators import login_required
 import datetime
 
 # Create your views here.
+@login_required
 def index(request):
     if not PageView.objects.filter(session=request.session.session_key):
         view = PageView(ip=request.META['REMOTE_ADDR'],created=datetime.datetime.now(),session=request.session.session_key)
