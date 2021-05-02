@@ -106,7 +106,7 @@ def index(request):
         profile.save()
         edit=Event(name="Edited Profile",username=request.user,created=datetime.datetime.now())
         edit.save()
-    context={"profile":profile,"user_number":User.objects.all().count(),"page_views":Event.objects.filter(ip__isnull=False,session__isnull=False),"sessions_active":Session.objects.filter(expire_date__gt=datetime.datetime.now()).count(),"sessions_inactive":Session.objects.filter(expire_date__lt=datetime.datetime.now()).count(),"logout_register":Event.objects.filter(name="logout",created__startswith=datetime.date.today())[:5]}
+    context={"profile":profile}
     return render(request,"index.html",context)
 
 def login(request):
