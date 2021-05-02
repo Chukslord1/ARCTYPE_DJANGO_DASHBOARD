@@ -59,42 +59,36 @@
     {% endfor %}
     <div class="col-sm-9">
       <div class="well">
-        <h4>Dashboard</h4>
+        <h4>Account</h4>
         <p>All Information</p>
       </div>
-      <div class="row">
-        <div class="col-sm-3">
-          <div class="well">
-            <h4>Users</h4>
-            <p>{{user_number}}</p>
-          </div>
-        </div>
-        <div class="col-sm-3">
-          <div class="well">
-            <h4>Page Views</h4>
-            <p>{{page_views}}</p>
-          </div>
-        </div>
-        <div class="col-sm-3">
-          <div class="well">
-            <h4>Sessions Active</h4>
-            <p>{{sessions_active}}</p>
-          </div>
-        </div>
-        <div class="col-sm-3">
-          <div class="well">
-            <h4>Sessions Inactive</h4>
-            <p>{{sessions_inactive}}</p>
-          </div>
-        </div>
-        <div class="col-sm-3">
-          <div class="well">
-            <h4>Logout Register (Last 5)</h4>
-            {% for item in logout_register %}
-            <p>{{item.username}} logged out at {{item.created}}</p>
-            {% endfor %}
-          </div>
-        </div>
+      <div class="well">
+        <form method="POST" >
+          {% csrf_token %}
+          <h4>Profile</h4>
+          <br>
+          <label>Email</label>
+          <br>
+          <input type="text" name="username" value="{{profile.username}}" />
+          <br>
+          <br>
+          <label>Username</label>
+          <br>
+          <input type="text" name="email" value="{{profile.email}}" />
+          <br>
+          <br>
+          <label>First Name</label>
+          <br>
+          <input type="text" name="first_name" value="{{profile.first_name}}" />
+          <br>
+          <br>
+          <label>Last Name</label>
+          <br>
+          <input type="text" name="last_name" value="{{profile.last_name}}" />
+          <br>
+          <br>
+          <button type="submit" >Submit</button>
+        </form>
       </div>
   </div>
 </div>
