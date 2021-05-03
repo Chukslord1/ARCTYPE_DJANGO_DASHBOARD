@@ -1,9 +1,3 @@
-arctype queeries
+arctype queries
 
-no of users; https://arctype.com/query/ba2ebe1b-4451-41ac-b3ce-885fc2025874
-
-no of page view: https://arctype.com/query/91d04d3e-de7c-41bc-9002-03c919000037
-
-no of active session: https://arctype.com/query/99919ee0-7f94-4c48-a442-c9036265dcb5
-
-no of inactive session: https://arctype.com/query/a68ccbb0-fa45-4c32-aec5-7e6458e9ae5c
+Find/Search Events: https://arctype.com/query/e23cd34d-07a6-4604-82a3-7e4108d4242f

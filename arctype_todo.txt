@@ -1,3 +1,0 @@
-create an events table
-create a query to group events into seperate tables
-create a model frim django and display data on Arctype as dashboard
